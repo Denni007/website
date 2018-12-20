@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign up</title>
+<link rel="stylesheet" type="text/css" href="color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+	function first()
+	{
+		var x;
+		x=document.getElementById('n').value;
+		var na=/^[A-Za-z ]+$/;
+		if (x=="") {
+			alert("enter the name");
+			document.getElementById("n").focus();
+			return false;
+		}
+		else if (na.test(x)==false) {
+			alert("enter the vaild name");
+			document.getElementById("n").focus();
+			return false;
+		}
+
+		var y;
+		y=document.getElementById('email').value;
+		var eml=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+;
+		if (y=="") {
+			alert("enter the email");
+			document.getElementById("email").focus();
+			return false;
+		}
+		else if (eml.test(y)==false) {
+			alert("enter the vaild email");
+			document.getElementById("eml").focus();
+			return false;
+		}
+		var z;
+		z=document.getElementById('pwd').value;
+		if (z=="") {
+			alert("enter the name Password");
+			document.getElementById("pwd").focus();
+			return false;
+		}
+		else if (z.length<6) {
+			alert("enter the vaild Password more than 6 chara");
+			return false;
+		}
+		var password = document.getElementById("pwd").value;
+        var confirmPassword = document.getElementById("pwd2").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        
+        var l;
+		l=document.getElementById('cname').value;
+		var naa=/^[A-Za-z ]+$/;
+		if (l=="") {
+			alert("enter the name");
+			document.getElementById("cname").focus();
+			return false;
+		}
+		else if (naa.test(l)==false) {
+			alert("enter the vaild name");
+			document.getElementById("cname").focus();
+			return false;
+		}
+		var e;
+		var e=document.getElementById('add').value;
+        if(e=="")
+        {
+        alert("Enter your Address");
+        return false;
+        }
+		var w;
+		w=document.getElementById('pno').value;
+		var mo=/^[0-9]{10}$/;
+		if (w=="") {
+			alert("enter the Phone no.");
+			document.getElementById("pno").focus();
+			return false;
+		}
+		else if (mo.test(w)==false) {
+			alert("enter the vaild phone number");
+			document.getElementById("pno").focus();
+			return false;
+		}
+		var t=document.getElementsByClassName("tc");
+		
+		if(t[0].checked==false)
+		{
+			alert("You have to agree Terms and Conditions");
+			return false;
+		}
+
+	}
+
+</script>
+</head>
+<body >
+<header>
+<div class="header">
+    <div class="header-top"></div>
+    <div class="main-menu">
+    <a class="header-left" href="homepage.html" ><img src="Capture2.PNG" alt="logo of weship"></a>
+
+
+           <a href="Find%20delivery.html"><p>find delievry</p></a>
+    <div class="header-right">
+        <div id="header">
+            <ul >
+                <li><a href="homepage.html">home</a></li>
+                <li><a href="sign%20up.html">Sign up</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</header>
+    <div class="banner">
+        <div class="overlay-bg" >
+        <div class="sup">
+            <center>
+                
+                <form action="homepage.html" onsubmit="return first();">
+                    <table cellpadding="1" cellspacing="5" >
+		<tr>	
+			<td>
+			<label> User_name<a style="color: red";>*</a>
+			</label>
+			</td>
+			
+		</tr>
+		<tr>
+			<td><input type="text" name="username" size="20" title="Please enter firstname." placeholder="username" id="n">
+			</td>
+		</tr>
+ 		<tr>
+			<td>
+			<label>Email <a style="color: red";>*</a></label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="Email" name="Email" size="47" id="email" placeholder="xyz@email.com">
+			</td>
+		</tr>
+		<tr>
+			<td><label>Password<a style="color: red";>*</a></label></td>
+			<td><label>confirm Password</label><a style="color: red";>*</a>	</td>
+		</tr>
+        <tr>
+		<td>
+			<input type="Password" name="Password" title="enter vaild Password" id="pwd">
+		</td>
+		<td>
+			<input type="Password" name=" confirm Password" title="rewrite Password" id="pwd2">
+		</td></tr>
+		<tr>
+            <td><label>companyname</label></td>
+		<tr>
+        <tr >
+            <td >
+                <input type="name" title="enter the companyname">
+            </td>
+        </tr>
+		
+				<tr>
+			<td><label >Address:</label>       
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<textarea rows="4" cols="43" id="add" placeholder="enter your Companyname Address."></textarea>			</td>
+		</tr>
+		<tr>
+		<td><label>Country</label>
+            </td><tr><td><select>
+        <option>India</option>
+        <option>England</option>
+        <option>America</option>
+        <option>France</option>
+        <option>Italy</option>
+        <option>Japan</option>
+        <option>Africa</option>
+        </select>
+        <br></td>
+		</tr>
+		<tr>
+			<td><label>Phone no.<a style="color: red";>*</a></label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<input type="Phone" name="Phone no." title="Please enter mobilenumber." id="pno">
+			</td>
+		</tr>
+		<tr>
+		<td colspan="2"><input type="checkbox" class="tc"> Agree Terms & Conditions  <br></td>
+		</tr>
+		
+		<tr>
+		<td><input type="submit" name="submit" >
+		</td>
+		</tr>
+</table>	
+</form>
+            </center>
+            </div>
+        </div>
+    </div>
+
+  <footer class="footer-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2">
+							<div class="single-footer-widget">
+								<h6>Quick links</h6>
+								<ul style="list-style: none;text-align: left; ">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="single-footer-widget">
+								<h6>Features</h6>
+								<ul style="list-style: none">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="single-footer-widget">
+								<h6>Resources</h6>
+								<ul style="list-style: none">
+									<li><a href="#">Guides</a></li>
+									<li><a href="#">Research</a></li>
+									<li><a href="#">Experts</a></li>
+									<li><a href="#">Agencies</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+						
+						<p class="ft">
+							
+Copyright ©<script>document.write(new Date().getFullYear());</script>2018 All rights reserved |this is  made<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/denish-kukadiya-586580134?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSqWiQQd%2FTQmAKBE4w%2BmyIw%3D%3D" target="_blank">Denny</a>
+
+						</p>											
+					</div>
+				</div>
+			<img class="footer-bottom" src="footer-bottom.png" alt="">
+        	
+        
+        </footer>
+</body>
+</html>

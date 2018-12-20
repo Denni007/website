@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Login</title>
+<style>
+body
+{
+        background-image: url("3.jpg");
+       background-repeat: no-repeat;
+}
+#box
+{
+    //background: linear-gradient(to bottom left,grey,orange);    
+    opacity: 0.7;
+    width: 400px;
+    height: 370px;
+    margin-left:-150px; 
+    margin-top:-150px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    border-radius: 10px;
+}
+#box h1
+    {
+        text-align: center;
+    }
+#dynamic
+{
+    font-size: 18pt;
+    height: 42px;
+    width: 300px;
+    border: 0px;
+    outline: 0px;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+#k
+{
+    font-size: 18pt;
+    border-radius: 25px;
+    height: 42px;
+    width: 100px;
+    border: 0px;
+    background: transparent;
+    border: 2px solid black;
+    font-weight: 300;
+}
+#k:hover
+    {
+    font-size: 19pt;
+    border-radius: 27px;
+    height: 44px;
+    width: 102px;
+    border: 0px;
+    //background: transparent;
+    border: 2px solid black;
+    font-weight: 300;
+    outline: 0px;
+        margin-top: -1;
+    }
+::placeholder {
+    color: red;
+    opacity: 1;}
+</style>
+</head>
+<body>
+    <div id="box"><h1>Login</h1>
+        <center><input type="text" name="username" placeholder="Username" id="dynamic"></center><br>
+        <center><input type="password" name="password" placeholder="Password" id="dynamic"></center>
+        <h3 style="padding-left: 45px;"><input type="checkbox" name="remeber me">Remember me
+        <a href="2.jpg" style="float: right;padding-right: 45px;text-decoration: none;color:black">forgot password?</a></h3>
+        <center><input type="button" name="submit" value="Submit" id="k"></center>
+        <center><p style="padding-top: 20px; font-size: 20px">If you are a new user <a href="signup.html" style="text-decoration: none;color:#004cff">Click here</a></p></center>
+    </div>
+</body>
+</html>
