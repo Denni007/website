@@ -35,7 +35,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
    
 }
 .header-top {
-    background-image: url("menu-top.jpg");
+    background-image: url("img/menu-top.jpg");
     background-attachment: scroll;
     background-size: cover;
     height: 20px;
@@ -258,7 +258,7 @@ h2
 
 
 .banner{
-background: url(68412622-trucks-wallpapers.jpg) center;
+background: url(img/68412622-trucks-wallpapers.jpg) center;
     background-size: auto;
    
     
